@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Kdam+Thmor+Pro&family=Oswald&family=Permanent+Marker&family=Roboto+Serif:ital,opsz,wght@1,8..144,200&display=swap');
+
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+    
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+}
+nav{  
+    background-color: rgba(0, 0, 0, 0.808);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    color: #770909;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive; 
+    text-decoration: none;
+    list-style: none;
+    
+   
+}
+
+h2{
+    color: brown;
+    font-size: 2rem;   
+}
+h3{
+    color: #f5eded;
+    font-size: 1.5rem;
+}
+h1,
+h2,
+h3{
+    font-family: 'Permanent Marker', cursive;
+}
+p{
+    color: #ff0000;
+}
+footer{
+    background-color: rgba(255, 255, 255, 0.342);
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+footer a{
+    width:100%;
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+    
+}
+
+
+/*clas*/
+.grid-container *{
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+@media (min-width:320px) {
+    
+    .grid-container{
+        background-image: url(../recursos/img/fondonegro.jpg);
+        display:grid;
+        gap: 10px;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "article"
+        "footer";
+    }
+}    
+
+
+.nav{
+    grid-area: nav;
+    justify-self: stretch;
+    width: auto;   
+}
+.header{
+    grid-area: header;
+}
+.productos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family:'Permanent Marker', cursive;
+    color: #a52a2a; 
+   
+}
+.figure:hover{
+    color: white;
+    font-weight: 700;
+    transform: translateX(10px);
+    cursor: pointer;
+}
+.main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  
+}
+.div-2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.table{
+    color: red;
+    font-size: 1rem;
+    font-family:'Permanent Marker', cursive; ;
+}
+.article{
+    grid-area: article;
+    
+}
+.footer{
+    grid-area: footer;
+}
+.ul__lia{
+    display: flex;
+    list-style: none;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #a52a2a;
+    font-family: 'Permanent Marker', cursive;   
+
+}
+.tex-center{
+    text-align: center;
+}
+
+.color__rojo{
+    color: #ff0000;
+    font-size: 1.5rem;
+    font-family: 'Permanent Marker', cursive;
+    
+}
+
+.texto__1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem ;
+    color: #f5eded;
+    border-style: double;
+}
+.galeriamin{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.form-form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #444;  
+    margin: 50px 50px;  
+}
+.form{
+    min-width: 400px;
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+}
+.imput{
+    width: 100%;
+    padding: 7px;
+    margin: 6px 0;
+}
+.form-img{
+    flex: 1;
+    padding: 10px;  
+    display: flex;  
+}
+.form-img img{
+    width:60%;
+    margin: auto;
+   
+}
+.form textarea{
+    min-height: 140px;
+}
+
+
+
+@media (min-width:768px){
+    .grid-container{
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-areas: 
+        "nav nav nav"
+        "header header header "
+        "main main main"
+        "article article article"
+        "footer footer footer";
+    }
+}
+.p-p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem ;
+    color: #f5eded;
+    padding: 20px;
+    width: 80%;
+    margin: 50px auto;
+    border-top: double #922c2c 3px ;
+}
+
+
+@media (min-width:1260px) {
+    .grid-container{
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-areas: 
+        "nav nav nav"
+        "header header header "
+        "main main main"
+        "article article article"
+        "footer footer footer";
+    }
+}
+button{
+    background: linear-gradient(to top, black, red);
+}
+button:hover{
+    color:white;
+    cursor: pointer;
+
+}
+@keyframes animationdiv {
+    0%{background-image:url(../recursos/img/header.png) ;}
+    25%{background-image: url(../recursos/img/verde.png);}
+    50%{background-image: url(../recursos/img/modelo\ blanca.png);}
+    75%{background-image: url(../recursos/img/flash1.png)}
+    100%{background-image: url(../recursos/img/flash3.png);}
+    
+}
+.animate{
+    height: 30vh; 
+    padding: auto;   
+    animation-name: animationdiv;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-duration: 10s;
+   
+
+}
